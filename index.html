@@ -1,31 +1,41 @@
+<!-- Hlavni web. stranka aplikace -->
 <!DOCTYPE html>
 <html lang="cs">
-
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jednoduchý Automat</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinkacka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="app.js"></script>
 </head>
-
-<center>
-  <body>
-    <div id="debil">
-      <h1>Jednoduchý Automat</h1>
-      <div id="kotouce">
-        <div class="slot" id="slot1">🍒</div>
-        <div class="slot" id="slot2">🍒</div>
-        <div class="slot" id="slot3">🍒</div>
-      </div>
-      <button id="spin-button">Roztoč</button>
+<body>
+    <div id="strana">
+        <div id="strana1" class="page_visible">
+            <h1>Cinkacka</h1>
+            <div id="kotouce">
+                <div id="first">⭐</div>
+                <div id="second">⭐</div>
+                <div id="third">⭐</div>
+            </div>
+            <hr />
+            <form>
+                <button type="button" onclick="Roztoc()">Roztoč</button>
+            </form>
+            <form>
+                <label for="sazka">Sázka</label>
+                <input type="number" name="sazka" id="sazka" value="1">
+            </form>
+            <div id="vyhra">Vyhra: Vyhral</div>
+        </div>
+        <div id="strana2" class="page">
+            <form>
+                <label for="znaky">Znaky v automatu</label>
+                <input type="text" name="znaky" id="znaky" value="⭐, 🍀, 🌈, 🍄, 🍎">
+            </form>
+        </div>
+        <button type="button" onclick="ZmenStranku1()">Tocka</button>
+        <button type="button" onclick="ZmenStranku2()">Nastaveni</button>
     </div>
-</center>
-
-
-
-
-
-  <script src="app.js"></script>
-  <script src="service-worker.js"></script>
-  
+</body>
+</html>
