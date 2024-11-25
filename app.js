@@ -25,6 +25,21 @@ function getRandomZnak(zasobnik_znaku){
     return zasobnik_znaku[num];
 }
 
+let kredit = 0;
+
+function pridejKredit(){
+    kredit = document.getElementById("inputkredit").value
+    document.getElementById("currentkredit").innerText = "kredit: " + kredit;
+    document.getElementById("strana").className ="page_visible";
+    document.getElementById("kredit").className ="page";
+}
+
+
+
+
+
+
+
 function Roztoc(){
     let zasobnik_znaku = document.getElementById("znaky").value.split(", ");
     console.log(zasobnik_znaku);
